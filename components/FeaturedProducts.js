@@ -71,7 +71,7 @@ export default function FeaturedProducts() {
     Promise.all([getProducts(), getSiteSettings()]).then(([products, settings]) => {
       if (!active) return;
       setItems(products);
-      setIds(settings.featured_ids || products.filter(p => p.featured).map(p => p.id) || featuredProductIds);
+      setIds((settings.featured_ids || products.filter(p => p.featured).map(p => p.id) || featuredProductIds).filter(id => products.some(product => product.id === id)));
     }).catch(error => console.error("Vitrin verileri okunamadı", error));
     return () => { active = false; };
   }, []);
