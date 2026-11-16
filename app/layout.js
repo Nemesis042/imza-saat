@@ -5,6 +5,13 @@ export const metadata={
  title:{default:"İmza Saat | Saat Aksesuarları",template:"%s | İmza Saat"},
  description:"İmza Saat; deri kayışlar, metal kordonlar, saat pilleri, mekanizmalar, saatçi el aletleri ve yedek parçalar.",
  applicationName:"İmza Saat",
+ icons:{
+  icon:[
+   {url:"/favicon.ico",sizes:"any"},
+   {url:"/favicon-48.png",type:"image/png",sizes:"48x48"},
+  ],
+  apple:"/apple-icon.png",
+ },
  openGraph:{type:"website",locale:"tr_TR",siteName:"İmza Saat",title:"İmza Saat | Saat Aksesuarları",description:"Saat aksesuarları, kayışlar, kordonlar ve saat yedek parçaları."},
  robots:{index:true,follow:true},
 };
